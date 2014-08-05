@@ -22,3 +22,6 @@
 *.exe
 *.out
 *.app
+
+# Pneumatic library
+pneumatic/
