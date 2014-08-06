@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../pneumatic/include/core/MethodResult.hpp
+string
+-
+
+../pneumatic/include/graphics/Window.hpp
+memory
+-
+string
+-
+
+/Users/georgeburton/Projects/CPP/Pneumatic-testbed/src/Main.cpp
+string
+-
+iostream
+-
+graphics/Window.hpp
+/Users/georgeburton/Projects/CPP/Pneumatic-testbed/src/graphics/Window.hpp
+core/MethodResult.hpp
+/Users/georgeburton/Projects/CPP/Pneumatic-testbed/src/core/MethodResult.hpp
+
