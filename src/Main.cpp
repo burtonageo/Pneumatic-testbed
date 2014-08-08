@@ -1,11 +1,11 @@
 #include <string>
 #include <iostream>
 
-#include "graphics/Window.hpp"
-#include "core/MethodResult.hpp"
+#include "pneu/graphics/Window.hpp"
+#include "pneu/core/MethodResult.hpp"
 
 auto main(int argc, const char** argv) -> int {
-  Pneumatic::Graphics::Window win("testing", 800, 600, 80, 60);
+  pneu::graphics::Window win("testing", 800, 600, 80, 60);
 
   win.init().onError([](const std::string& error) {
                        std::cout << error << std::endl;

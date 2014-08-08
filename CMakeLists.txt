@@ -6,14 +6,14 @@ set(CMAKE_MINOR_VERSION 1)
 project(${PROJECT_NAME})
 
 set(SRC_DIR "${PROJECT_SOURCE_DIR}/src")
-set(INCLUDE_DIR "${PROJECT_SOURCE_DIR}/include")
+set(LIB_DIR "${PROJECT_SOURCE_DIR}/lib")
 
 set(SOURCES
 	"${SRC_DIR}/Main.cpp")
 
 # Pneumatic
 #===========
-set (PNEUMATIC_DIR "${PROJECT_SOURCE_DIR}/pneumatic")
+set (PNEUMATIC_DIR "${LIB_DIR}/pneumatic")
 set (PNEUMATIC_INCLUDE_DIRS "${PNEUMATIC_DIR}/include")
 set (PNEUMATIC_LIBRARIES "pneumatic")
 
