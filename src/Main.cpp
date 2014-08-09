@@ -2,20 +2,28 @@
 #include <iostream>
 
 #include "pneu/graphics/Window.hpp"
+#include "pneu/graphics/Renderer.hpp"
 #include "pneu/core/MethodResult.hpp"
 
+#define GLM_FORCE_CXX11
+#define GLM_FORCE_RADIANS
+#include <glm/glm.hpp>
+
 auto main(int argc, const char** argv) -> int {
-  pneu::graphics::Window win("testing", 800, 600, 80, 60);
+  pneu::graphics::Window window("testing", 800, 600, 80, 60);
 
-  win.init().onError([](const std::string& error) {
-                       std::cout << error << std::endl;
-                       exit(1);
-                     });
+  window.init().onError([](const std::string& error) {
+                          std::cout << error << std::endl;
+                          exit(1);
+                        });
 
-  while (win.isRunning()) {
-    win.pollEvents();
-    win.update();
-    win.renderFrame();
+  // set background to a nice shade of blue
+  window.getRenderer().setBackgroundColor(glm::vec3(0.2f, 0.3f, 0.7f));
+
+  while (window.isRunning()) {
+    window.pollEvents();
+    window.update();
+    window.renderFrame();
   }
 
   return 0;
