@@ -19,7 +19,7 @@ auto main(int argc, const char** argv) -> int {
                         });
 
   // set background to a nice shade of blue
-  window.getRenderer().setBackgroundColor(pneu::graphics::Colorf(0.2f, 0.3f, 0.7f));
+  window.getRenderer().setBackgroundColor(pneu::graphics::Color<>(0.2f, 0.3f, 0.7f));
 
   while (window.isRunning()) {
     window.pollEvents();
