@@ -21,14 +21,19 @@ auto main(int argc, const char** argv) -> int {
                           exit(1);
                         });
 
+  // get the renderer
+  pneu::graphics::Renderer& renderer = window.getRenderer();
+
   // set background to a nice shade of blue
-  window.getRenderer().setBackgroundColor(pneu::graphics::Color<>(0.2f, 0.3f, 0.7f));
+  renderer.setBackgroundColor(pneu::graphics::Color<>(0.2f, 0.3f, 0.7f));
+
+  // add a circle (currently segfaults :-( )
   /*
-  window.getRenderer().addRenderObject(
-    std::make_shared<pneu::graphics::shapes::Ellipse>(glm::vec2(0.0f),
-                                                      pneu::graphics::Color<>::red(),
-                                                      5.0f));
+  renderer.addRenderObject<pneu::graphics::shapes::Ellipse>(glm::vec2(0.0f),
+                                                            pneu::graphics::Color<>::red(),
+                                                            5.0f);
   */
+
   while (window.isRunning()) {
     window.pollEvents();
     window.update();
