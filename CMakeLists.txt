@@ -13,14 +13,16 @@ set(SOURCES
 
 # Pneumatic
 #===========
-set (PNEUMATIC_DIR "${LIB_DIR}/pneumatic")
-set (PNEUMATIC_INCLUDE_DIRS "${PNEUMATIC_DIR}/include")
-set (PNEUMATIC_LIBRARIES "pneumatic")
+set(PNEUMATIC_DIR "${LIB_DIR}/pneumatic")
+set(PNEUMATIC_INCLUDE_DIRS "${PNEUMATIC_DIR}/include")
+set(PNEUMATIC_LIBRARIES "pneumatic")
 
 add_subdirectory(${PNEUMATIC_DIR})
 link_directories(${PNEUMATIC_DIR})
-
 include_directories(${PNEUMATIC_INCLUDE_DIRS})
+
+set(GLM_INCLUDE_DIRS "${PNEUMATIC_DIR}/thirdparty/glm")
+include_directories(${GLM_INCLUDE_DIRS})
 
 # Building
 #==========
